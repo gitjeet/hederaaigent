@@ -48,7 +48,7 @@ app.get('/tokentransfer/:contract/:recipient', async (req, res) => {
       TokenId.fromString(contract),
       recipient,
       1,
-      false
+      true
     );
     res.json(result);
   } catch (error) {
@@ -65,7 +65,7 @@ app.get('/airdrop/:contract/:recipient', async (req, res) => {
     const result = await hederaAgentKit.airdropToken(
       TokenId.fromString(contract),
       recipients,
-      false
+      true
     );
 
     res.json(result);
