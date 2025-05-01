@@ -1,3 +1,4 @@
+import "web-streams-polyfill/polyfill";
 import express from 'express';
 import { HederaAgentKit } from 'hedera-agent-kit';
 import { TokenId } from "@hashgraph/sdk";
